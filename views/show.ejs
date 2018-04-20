@@ -1,0 +1,94 @@
+<% include ./partials/header %>
+
+<div class="container-fluid">
+    <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+              <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/spaces">
+                      <span data-feather="home"></span>
+                      Home <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/spaces/new">
+                      <span data-feather="file"></span>
+                      Add Space
+                    </a>
+                  </li>
+    
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                  <span>All Spaces</span>
+                  <a class="d-flex align-items-center text-muted" href="#">
+                    <span data-feather="plus-circle"></span>
+                  </a>
+                </h6>
+              <!--TO DO-->
+            </nav>
+        
+        <div class="container col-8">
+                <div class="">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="<%= space.img %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a><%= space.name %></a>
+                            <div class="float-right">Free</div>
+                        </h5>
+                        <div class="card-text">
+                            <div class=""><%= space.description %></div>
+                        </div>
+                        <div>
+                          <em><div>Submitted by <%= space.author.username %>, <%= moment(space.createDate).fromNow() %></div></em>
+                          
+                        </div>
+                        <div>
+                            <a href= "/spaces" class="btn btn-primary"> Go Back </a>
+                            <% if(currentUser && space.author.id.equals(currentUser._id)){ %>
+                              <a href= "/spaces/<%= space._id %>/edit" class="btn btn-primary"> Edit </a>
+                              <form class = "delete" action="/spaces/<%= space._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-primary"> Delete </button>
+                              </form>
+                            <% } %>
+                            
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+               <div class="">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <div class="card-text">
+                      <div class="text-right">
+                          <a href= "/spaces/<%= space._id %>/comments/new" class="btn btn-primary"> Leave Comment </a>
+                      </div>
+                      <hr>
+                      <div class>
+                          <% space.comments.forEach(function(comm){ %>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <strong><%= comm.author.username %></strong>
+                                      <span class="float-right"><%= moment(comm.createDate).fromNow() %></span>
+                                      <p><%= comm.text %></p>
+                                
+                                    <% if(currentUser && comm.author.id.equals(currentUser._id)){ %>
+                                      <a href= "/spaces/<%= space._id %>/comments/<%= comm._id %>/edit" class="btn btn-primary"> Edit </a>
+                                      <form class = "delete" action="/spaces/<%= space._id %>/comments/<%= comm._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-primary"> Delete </button>
+                                      </form>
+                                    <% } %>
+                                  </div>
+                              </div>
+                          <% }); %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

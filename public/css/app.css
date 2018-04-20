@@ -1,0 +1,45 @@
+/*.formPart {*/
+/*    width: 100%;*/
+/*}*/
+.jumbotron {
+  margin: 15px 0 15px 0 ;
+}
+
+.formContain {
+    width: 40%;
+    margin: 30px auto;
+}
+
+.formHead {
+    text-align: center;
+}
+
+/*----------------------*/
+/*side bar*/
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.delete {
+  display: inline;
+}
+
+#myNav {
+  margin: 0 0 15px 0;
+}

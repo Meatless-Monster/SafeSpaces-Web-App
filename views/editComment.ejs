@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class = >
+        <h1 class="formHead">Edit Comment</h1>
+        <div class = "formContain">
+            <form action="/spaces/<%= spaceId %>/comments/<%= comm._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment[text]" value = "<%= comm.text %>">
+                </div>
+                
+                <input class= "btn btn-primary btn-large btn-block" type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class = >
+        <h1 class="formHead">Add a New Safe Space</h1>
+        <div class = "formContain">
+            <form action="/spaces" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="newSpace" placeholder="New Space">
+                </div>
+            
+                <div class="form-group">
+                    <input class="form-control" type="text" name="newPic" placeholder="Picture Link">
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="desc" placeholder="Description">
+                </div>
+                
+                <input class= "btn btn-primary btn-large btn-block" type="submit" class = "btn btn-primary">
+            </form>
+            <a href="/spaces" >Return to Safe Spaces</a>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>

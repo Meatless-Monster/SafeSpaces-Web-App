@@ -1,0 +1,35 @@
+<% include ./partials/header %>
+    
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Spaces</h1>
+            <h4>Ah yes!</h4>
+            <a class="btn btn-primary" href="/spaces/new">Add a New Space</a>
+        </div>
+    </header>
+        
+    <div class="row text-center">
+        <% spaces.forEach(function(space){ %>
+                <div class="col-md-4 col-sm-6">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="<%= space.img %>">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= space.name %></h5>
+                      <!--<div class="d-flex justify-content-between align-items-center">-->
+                        <div>
+                          <a href= "/spaces/<%= space._id %>" class="btn btn-primary"> Show </a>
+                        </div>
+                        <!--<small class="text-muted">9 mins</small>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                </div>
+        <% }); %>
+    </div>
+    
+    
+    
+</div>
+
+<% include ./partials/footer %>
