@@ -11,9 +11,9 @@ Designed and implemented with RESTful routing conventions.
 Backend in: NodeJs, MongoDB 
 Frontend in: HTML/css, Javascript, Bootstrap library
 
-To Run:
-  clone respository 
-  in terminal: mongod
-  in seperate terminal: node app.js
-  
+To Run: <br />
+      clone respository <br /> 
+      in terminal: mongod <br />
+      in seperate terminal: node app.js 
+  
 Right now, a user can view different posts and the comments on those posts, login/register to add or update entries and add or update comments, and delete posts/comments. I’m working on adding a star rating method, a user profile page, and easier to navigate design. Going forward I want to think about adding ways to moderate posts, categorize posts, and search for posts.
