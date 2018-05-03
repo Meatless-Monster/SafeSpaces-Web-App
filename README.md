@@ -1,8 +1,5 @@
-SafeSpaces Web App
+# SafeSpaces Web App
 
-![alt text]("README images"/image-index.png)
-![alt text]("README images"/image-posting.png)
-![alt text]("README images"/image-comments.png)
 
 A yelp type website where people can enter and comment on different safe or supportive spaces on campus i.e. minority spaces, empathetic professors, school resources for financial or career assistance, etc.People come into Wellesley from a lot of different cultural and socioeconomic backgrounds and it can be really difficult to understand the “language” of campus and how to find resources and support.
 
