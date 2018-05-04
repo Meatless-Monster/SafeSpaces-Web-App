@@ -4,7 +4,7 @@
 <img width="1280" alt="image-posting" src="https://user-images.githubusercontent.com/30183946/39557745-d501376c-4e57-11e8-8c0e-1c11412cb797.png">
 <img width="1280" alt="image-comments" src="https://user-images.githubusercontent.com/30183946/39557761-f1a7f5ae-4e57-11e8-8c14-9c25078820b0.png">
 
-An interactive yelp-like web app designed for college students to share information about what resources they have found useful, particularly resources/people who have helped minority students learn about financial and emotional stability. 
+An interactive web app designed for college students to share information about what resources they have found useful, particularly resources/people who have helped minority students learn about financial and emotional stability. 
 
 Designed and implemented with RESTful routing conventions. 
 
